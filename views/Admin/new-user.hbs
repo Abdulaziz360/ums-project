@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ums</title>
+</head>
+<body>
+  {{!-- {{>header}} --}}
+   <h1>new user</h1> 
+   <form action=""method='post'enctype="multipart/form-data">
+
+  <input type="text"name='name' placeholder="Enter your name">
+  <br>
+  <br>
+  <br>
+
+  <input type="email"name='email' placeholder="Enter your email">
+  <br>
+  <br>
+  <br>
+ 
+  <input type="text"name='phone' placeholder="Enter your mobile number">
+  <br>
+  <br>
+  <br>
+  
+  <input type="file"name='image'>
+  <br>
+  <br>
+  <br>
+  
+  <button type="submit">Add User</button>
+</form>
+<br><br><br>
+<a href="/admin/dashboard">Go Back</a>
+   {{#if message}}
+    <p style="color: green;">{{message}}</p>
+  {{/if}}
+  <br><br><br>
+  {{>footer}}
+</body>
+</html>
+

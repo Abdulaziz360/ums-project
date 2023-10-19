@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    {{!-- {{>header}} --}}
+    <h1>verification</h1>
+    {{#if message}}
+    <h3>{{message}}</h3>
+  {{/if}}
+    <form action="/is_verified" method='post'>
+        Email<br>
+        <input type="email" name='email' placeholder="Enter your email">
+        <br>
+        <br>
+        <button type="submit">Send mail</button>
+    </form>
+
+    {{>footer}}
+</body>
+
+</html>

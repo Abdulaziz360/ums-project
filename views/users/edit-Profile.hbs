@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ums</title>
+</head>
+<body>
+  {{>header}}
+   <h1>update profile</h1> 
+   <img src="userimages/{{user.Image}}"height='100px'width="100px" alt="">
+   <form action=""method='post'enctype="multipart/form-data">
+   <input type="file"name='image'>
+   <br><br>
+   <input type="hidden"name='_id'value={{user._id}} placeholder="Enter your name">
+  Name<br>
+  <input type="text"name='name'value={{user.name}} placeholder="Enter your name">
+  <br>
+  <br>
+  <br>
+  Email<br>
+  <input type="email"name='email'value={{user.email}}  placeholder="Enter your email">
+  <br>
+  <br>
+  <br>
+  Mobile<br>
+  <input type="text"name='phone' value={{user.phone}} placeholder="Enter your mobile number">
+  <br>
+  <br>
+  <br>
+  {{!-- Image<br>
+  <input type="file"name='image'>
+  <br>
+  <br>
+  <br>
+  Password<br>
+  <input type="password"name='password' placeholder="Enter your password">
+  <br>
+  <br>
+  <br> --}}
+  <button type="submit">update</button>
+</form>
+   {{#if message}}
+    <p style="color: green;">{{message}}</p>
+  {{/if}}
+  {{>footer}}
+</body>
+</html>
+

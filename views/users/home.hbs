@@ -1,0 +1,34 @@
+
+{{>header}}
+ <!-- Content -->
+  <div style="padding:20px">
+    <!-- Your page content goes here -->
+    <h1>Welcome to the Home Page</h1>
+    {{#if message}}
+        <h4 style="color:rgb(0, 8, 252);">{{message}}</h4> 
+        <div style="">
+        </div>
+        <table>
+           <tr>
+            
+            <td><img src="userimages/{{userdata.Image}}"height='100px'width='100px' alt="Image"></td>
+          </tr>
+          <tr>
+            <td><p>Name:</p></td>
+            <td>{{userdata.name}}</td>
+          </tr>
+          <tr>
+            <td><p>Email:</p></td>
+            <td>{{userdata.email}}</td>
+          </tr>
+          <tr>
+            <td><p>Phone:</p></td>
+            <td>{{userdata.phone}}</td>
+          </tr>
+         
+        </table>
+        <a href="/edit?_id={{userdata._id}}">Edit Profile</a>
+      {{else}}   
+          <p>This is the content of the home page.</p>
+    {{/if}}      
+  </div>
